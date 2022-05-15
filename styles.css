@@ -55,7 +55,7 @@ img {
   padding: 20px;
 }
 
-@media (max-width: 940px) {
+@media screen and (max-width: 940px) {
   body {
     width: auto;
     height: auto;
@@ -74,7 +74,24 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  .profile {
+    grid-area: "profile";
+    grid-column: profile;
+  }
+  .container {
+    grid-gap: 20px;
+    grid-template-areas:
+      "header header header"
+      "profile profile profile"
+      "social social social"
+      "social social social"
+      "social social social"
+      "social social social";
+  }
+}
+
+@media screen and (max-width: 400px) {
   .profile {
     grid-area: "profile";
     grid-column: profile;
