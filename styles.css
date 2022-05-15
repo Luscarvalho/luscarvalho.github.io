@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: rgb(28, 28, 28);
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  place-items: center;
+  grid-template-areas:
+    "header header header header header"
+    "profile social social social social"
+    "profile social social social social"
+    "profile social social social social";
+}
+
+.header {
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  grid-area: "header";
+  grid-column: header;
+}
+
+img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.profile {
+  display: grid;
+  place-items: center;
+  width: 360px;
+  grid-area: "profile";
+  grid-row: profile;
+}
+
+.social {
+  width: 80px;
+  height: 80px;
+  grid-area: "social";
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 940px) {
+  body {
+    width: auto;
+    height: auto;
+  }
+  .profile {
+    grid-area: "profile";
+    grid-column: profile;
+  }
+  .container {
+    grid-template-areas:
+      "header header header header"
+      "profile profile profile profile"
+      "social social social social"
+      "social social social social"
+      "social social social social";
+  }
+}
+
+@media (max-width: 600px) {
+  .profile {
+    grid-area: "profile";
+    grid-column: profile;
+  }
+  .container {
+    grid-gap: 20px;
+    grid-template-areas:
+      "header header header"
+      "profile profile profile"
+      "social social social"
+      "social social social"
+      "social social social"
+      "social social social";
+  }
+}
